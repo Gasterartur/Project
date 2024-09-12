@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Events</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container header__container_wide">
+				<a target="_blank" href="home.html" class="header__logo logo">
+					<img src="img/logo.svg" alt="logo: Meetup">
+				</a>
+				<div class="header__wrapper">
+					<form class="header__search-block">
+						<div class="header__search search search_left">
+							<button type="submit" aria-label="search-button" class="search__btn">
+								<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.4648 7.625C12.4648 10.6626 10.0024 13.125 6.96484 13.125C3.92728 13.125 1.46484 10.6626 1.46484 7.625C1.46484 4.58743 3.92728 2.125 6.96484 2.125C10.0024 2.125 12.4648 4.58743 12.4648 7.625ZM13.8398 7.625C13.8398 11.4219 10.7618 14.5 6.96484 14.5C3.16788 14.5 0.0898438 11.4219 0.0898438 7.625C0.0898438 3.82804 3.16788 0.75 6.96484 0.75C10.7618 0.75 13.8398 3.82804 13.8398 7.625ZM12.4371 14.0694L11.9669 13.5993C12.3188 13.3044 12.6442 12.979 12.9391 12.6271L13.4093 13.0972L16.1593 15.8472C16.4278 16.1157 16.4278 16.551 16.1593 16.8194C15.8908 17.0879 15.4556 17.0879 15.1871 16.8194L12.4371 14.0694Z" fill="#707070" />
+								</svg>
+							</button>
+							<input placeholder="Search events" type="text" class="search__input">
+						</div>
+						<div class="header__search search search_right">
+							<button aria-label="search-button" type="submit" class="search__btn">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.0898 6.75C12.0898 9.51142 9.85126 11.75 7.08984 11.75C4.32842 11.75 2.08984 9.51142 2.08984 6.75C2.08984 3.98857 4.32842 1.75 7.08984 1.75C9.85126 1.75 12.0898 3.98857 12.0898 6.75ZM13.3398 6.75C13.3398 10.2017 10.5416 13 7.08984 13C3.63806 13 0.839844 10.2017 0.839844 6.75C0.839844 3.29822 3.63806 0.5 7.08984 0.5C10.5416 0.5 13.3398 3.29822 13.3398 6.75ZM12.0646 12.6086L11.6372 12.1812C11.9571 11.9131 12.2529 11.6173 12.521 11.2973L12.9484 11.7247L15.4484 14.2247C15.6925 14.4688 15.6925 14.8645 15.4484 15.1086C15.2043 15.3527 14.8087 15.3527 14.5646 15.1086L12.0646 12.6086Z" fill="white" />
+								</svg>
+							</button>
+							<input placeholder="Mountain View, CA" type="text" class="search__input">
+						</div>
+					</form>
+				</div>
+				<div class="header__actions">
+
+
+					<div class="header__language">
+						<img src="img/icons/globus.svg" alt="icon: globus">
+						<span class="selected-display" id="destination">English</span>
+					</div>
+
+
+
+					<button class="button button_transparent">Log in</button>
+					<button class="button">Sign up</button>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="events-page">
+				<div class="events-page__container">
+					<div class="events-page__wrapper">
+						<div class="events-page__column">
+							<h1 class="events-page__title title">Events near New York, NY</h1>
+							<span class="events-page__name">Events</span>
+
+							<form action="" class="events-page__filter">
+								<select id="type-select">
+									<option value="">Any type</option>
+									<option value="online">Online</option>
+									<option value="offline">Offline</option>
+								</select>
+
+								<select id="category-select">
+									<option value="">Any category</option>
+									<option value="Technology">Technology</option>
+									<option value="Hobbies and Passions">Hobbies and Passions</option>
+									<option value="Business">Business</option>
+									<option value="Social Activities">Social Activities</option>
+									<option value="Health and Wellbeing">Health and Wellbeing</option>
+								</select>
+
+								<select id="distance-select">
+									<option value="">Any distance</option>
+									<option value="10">Within 10 km</option>
+									<option value="25">Within 25 km</option>
+									<option value="50">Within 50 km</option>
+									<option value="100">Within 100 km</option>
+								</select>
+
+								<input type="date" id="date-select">
+
+
+
+							</form>
+
+							<div class="events-page__items" id="events-container">
+
+							</div>
+						</div>
+						<div class="events-page__column events-page__column_right">
+							<div class="events-page__info">
+								<div class="events-page__topic">Find events near</div>
+								<div class="events-page__city">New York, NY</div>
+							</div>
+							<div class="events-page__map">
+								<img src="img/map.jpg" alt="image: map">
+								<button class="close-map">
+									<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M3.25 3.25L11.75 11.75L3.25 3.25ZM11.75 3.25L3.25 11.75L11.75 3.25Z" fill="#00AECD" />
+										<path d="M3.25 3.25L11.75 11.75M11.75 3.25L3.25 11.75" stroke="#00AECD" stroke-width="1.25" />
+									</svg>
+								</button>
+								<button class="browse">
+									<span>Browse in map</span>
+									<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_2_5952)">
+											<mask id="mask0_2_5952" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="18">
+												<path d="M0.400391 18L18.4004 18L18.4004 0L0.400391 0L0.400391 18Z" fill="white" />
+											</mask>
+											<g mask="url(#mask0_2_5952)">
+												<path d="M0.400391 17.2503C0.400391 17.4492 0.479408 17.64 0.620059 17.7806C0.760712 17.9213 0.951478 18.0003 1.15039 18.0003H6.02539C6.1737 18.0003 6.31867 17.9563 6.44198 17.8739C6.56529 17.7914 6.66139 17.6743 6.71815 17.5373C6.7749 17.4003 6.78975 17.2495 6.76083 17.104C6.7319 16.9586 6.6605 16.8249 6.55564 16.72L4.91389 15.0753C4.89643 15.0579 4.88257 15.0372 4.87312 15.0144C4.86367 14.9916 4.8588 14.9672 4.8588 14.9425C4.8588 14.9179 4.86367 14.8935 4.87312 14.8707C4.88257 14.8479 4.89643 14.8272 4.91389 14.8098L8.18839 11.5391C8.36423 11.3632 8.46301 11.1247 8.46301 10.8761C8.46301 10.6274 8.36423 10.3889 8.18839 10.213C8.01255 10.0372 7.77406 9.93848 7.52539 9.93848C7.27672 9.93848 7.03823 10.0372 6.86239 10.213L3.58789 13.4875C3.57047 13.505 3.54978 13.5189 3.527 13.5283C3.50422 13.5378 3.4798 13.5426 3.45514 13.5426C3.43048 13.5426 3.40605 13.5378 3.38328 13.5283C3.3605 13.5189 3.33981 13.505 3.32239 13.4875L1.68064 11.8458C1.61107 11.776 1.52844 11.7206 1.43745 11.6828C1.34647 11.645 1.24893 11.6254 1.15039 11.6253C1.0518 11.625 0.95414 11.6444 0.863141 11.6823C0.726127 11.7391 0.609033 11.8353 0.526665 11.9586C0.444297 12.082 0.400354 12.227 0.400391 12.3753L0.400391 17.2503Z" fill="#00798A" />
+												<path d="M17.6505 4.26186e-07L12.7755 0C12.6272 3.14583e-05 12.4822 0.0440349 12.3589 0.126449C12.2356 0.208862 12.1395 0.325985 12.0827 0.463009C12.026 0.600034 12.0111 0.750809 12.0401 0.896273C12.069 1.04174 12.1404 1.17536 12.2453 1.28025L13.887 2.925C13.9044 2.94235 13.9183 2.96298 13.9277 2.9857C13.9372 3.00842 13.942 3.03277 13.942 3.05738C13.942 3.08198 13.9372 3.10634 13.9277 3.12905C13.9183 3.15177 13.9044 3.1724 13.887 3.18975L10.6125 6.46425C10.5254 6.55132 10.4564 6.65468 10.4092 6.76844C10.3621 6.88219 10.3379 7.00412 10.3379 7.12725C10.3379 7.25038 10.3621 7.37231 10.4092 7.48606C10.4564 7.59982 10.5254 7.70318 10.6125 7.79025C10.6996 7.87732 10.8029 7.94638 10.9167 7.9935C11.0304 8.04062 11.1524 8.06487 11.2755 8.06487C11.3986 8.06487 11.5206 8.04062 11.6343 7.9935C11.7481 7.94638 11.8514 7.87732 11.9385 7.79025L15.213 4.51425C15.2304 4.49679 15.2511 4.48294 15.2739 4.47348C15.2967 4.46403 15.3211 4.45917 15.3457 4.45917C15.3704 4.45917 15.3948 4.46403 15.4176 4.47348C15.4404 4.48294 15.4611 4.49679 15.4785 4.51425L17.1202 6.156C17.2252 6.2609 17.3589 6.33232 17.5044 6.36122C17.6499 6.39013 17.8008 6.37521 17.9378 6.31837C18.0749 6.26152 18.192 6.1653 18.2744 6.04188C18.3567 5.91845 18.4006 5.77338 18.4005 5.625V0.750001C18.4005 0.551088 18.3215 0.360322 18.1808 0.21967C18.0402 0.0790171 17.8494 4.43576e-07 17.6505 4.26186e-07Z" fill="#00798A" />
+											</g>
+										</g>
+										<defs>
+											<clipPath id="clip0_2_5952">
+												<rect width="18" height="18" fill="white" transform="translate(0.400391)" />
+											</clipPath>
+										</defs>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top">
+					<div class="footer__headline">Create your own Meetup group.</div>
+					<a href="#" class="button button_transparent button_footer">Get Started</a>
+				</div>
+				<nav class="footer__menu">
+					<div class="footer__column">
+						<div class="footer__topic">Your Account</div>
+						<ul>
+							<li><a href="#">Sign up</a></li>
+							<li><a href="#">Log in</a></li>
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Become an Affiliate</a></li>
+						</ul>
+					</div>
+					<div class="footer__column">
+						<div class="footer__topic">Discover</div>
+						<ul>
+							<li><a href="#">Groups</a></li>
+							<li><a href="#">Calendar</a></li>
+							<li><a href="#">Topics</a></li>
+							<li><a href="#">Cities</a></li>
+							<li><a href="#">Online Events</a></li>
+							<li><a href="#">Local Guides</a></li>
+							<li><a href="#">Make Friends</a></li>
+						</ul>
+					</div>
+					<div class="footer__column">
+						<div class="footer__topic">Meetup</div>
+						<ul>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Meetup Pro</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Apps</a></li>
+							<li><a href="#">Podcast</a></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="footer__social">
+					<div class="footer__headline">Follow us</div>
+					<div class="footer__wrapper">
+						<ul class="footer__link-socials">
+							<li>
+								<a href="#">
+									<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M25.5 13.076C25.5 6.13101 19.903 0.5 13 0.5C6.09698 0.5 0.5 6.13101 0.5 13.076C0.5 19.3525 5.07043 24.5555 11.0471 25.5V16.7121H7.87238V13.076H11.0471V10.3047C11.0471 7.15315 12.9139 5.41115 15.7686 5.41115C17.1361 5.41115 18.5671 5.65697 18.5671 5.65697V8.75194H16.9902C15.4381 8.75194 14.9529 9.7211 14.9529 10.7168V13.0759H18.4194L17.8656 16.712H14.9529V25.4999C20.9295 24.5571 25.5 19.3542 25.5 13.076Z" fill="#D9D9D9" />
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M27.5 7.40507C26.5801 7.81301 25.5916 8.08872 24.5541 8.21271C25.6131 7.57791 26.4264 6.57275 26.8094 5.3751C25.8184 5.96282 24.7206 6.38969 23.5524 6.61975C22.6166 5.62293 21.2838 5 19.8085 5C16.9759 5 14.6792 7.29645 14.6792 10.1289C14.6792 10.5309 14.7247 10.9224 14.8121 11.2978C10.5494 11.0839 6.77009 9.04194 4.24037 5.93886C3.79887 6.69639 3.54594 7.57745 3.54594 8.51741C3.54594 10.2968 4.45151 11.8668 5.82775 12.7865C4.98692 12.7599 4.19611 12.5291 3.50451 12.145C3.50415 12.1664 3.50415 12.1879 3.50415 12.2095C3.50415 14.6946 5.27214 16.7676 7.61851 17.2388C7.18809 17.356 6.73497 17.4186 6.26715 17.4186C5.93666 17.4186 5.61532 17.3865 5.30222 17.3266C5.95486 19.3644 7.84904 20.8472 10.0935 20.8886C8.33809 22.2642 6.1265 23.0842 3.72353 23.0842C3.30956 23.0842 2.90126 23.06 2.5 23.0126C4.76984 24.4679 7.46589 25.317 10.3624 25.317C19.7965 25.317 24.9555 17.5015 24.9555 10.7237C24.9555 10.5013 24.9505 10.2801 24.9406 10.0602C25.9427 9.33702 26.8124 8.43365 27.5 7.40507Z" fill="#D9D9D9" />
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M15 5C2.715 5 2.5 6.0925 2.5 14.625C2.5 23.1575 2.715 24.25 15 24.25C27.285 24.25 27.5 23.1575 27.5 14.625C27.5 6.0925 27.285 5 15 5ZM19.0063 15.0425L13.3938 17.6625C12.9025 17.89 12.5 17.635 12.5 17.0925V12.1575C12.5 11.6162 12.9025 11.36 13.3938 11.5875L19.0063 14.2075C19.4975 14.4375 19.4975 14.8125 19.0063 15.0425Z" fill="#D9D9D9" />
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M24.1561 19.5454C24.1061 20.6424 23.9226 21.2384 23.7704 21.6343C23.5658 22.1591 23.3216 22.5344 22.9257 22.928C22.5344 23.3216 22.1591 23.5651 21.6343 23.7675C21.2384 23.9221 20.6401 24.1061 19.5432 24.1584C18.3572 24.2106 18.0059 24.2217 14.9986 24.2217C11.9941 24.2217 11.6399 24.2106 10.454 24.1584C9.35708 24.1061 8.76163 23.9221 8.36574 23.7675C7.83813 23.5651 7.46564 23.3216 7.072 22.928C6.67557 22.5344 6.43151 22.1591 6.22969 21.6343C6.07732 21.2384 5.8911 20.6424 5.84381 19.5454C5.78601 18.3595 5.77542 18.0026 5.77542 15.0014C5.77542 11.9941 5.78601 11.6399 5.84381 10.454C5.8911 9.35708 6.07732 8.76162 6.22969 8.3624C6.43151 7.83812 6.67557 7.46505 7.072 7.07141C7.46564 6.67836 7.83813 6.43426 8.36574 6.22969C8.76163 6.07457 9.35708 5.89331 10.454 5.84106C11.6399 5.78878 11.9941 5.77542 14.9986 5.77542C18.0059 5.77542 18.3572 5.78878 19.5432 5.84106C20.6401 5.89331 21.2384 6.07457 21.6343 6.22969C22.1591 6.43426 22.5344 6.67836 22.9257 7.07141C23.3216 7.46505 23.5658 7.83812 23.7704 8.3624C23.9226 8.76162 24.1061 9.35708 24.1561 10.454C24.2113 11.6399 24.2245 11.9941 24.2245 15.0014C24.2245 18.0026 24.2113 18.3595 24.1561 19.5454ZM26.1816 10.3617C26.1266 9.16301 25.9375 8.34406 25.6567 7.63076C25.371 6.89074 24.9879 6.26359 24.3608 5.63645C23.7364 5.01209 23.1092 4.62901 22.3692 4.33991C21.6531 4.06191 20.837 3.87064 19.6378 3.81839C18.4385 3.76055 18.0554 3.75 14.9986 3.75C11.9446 3.75 11.5588 3.76055 10.3595 3.81839C9.16301 3.87064 8.34739 4.06191 7.62796 4.33991C6.89074 4.62901 6.26359 5.01209 5.63924 5.63645C5.01209 6.26359 4.629 6.89074 4.34045 7.63076C4.06245 8.34406 3.87342 9.16301 3.81559 10.3617C3.76334 11.561 3.75 11.9446 3.75 15.0014C3.75 18.0554 3.76334 18.4385 3.81559 19.6378C3.87342 20.8342 4.06245 21.6526 4.34045 22.3692C4.629 23.1065 5.01209 23.7364 5.63924 24.3608C6.26359 24.9851 6.89074 25.371 7.62796 25.6595C8.34739 25.9375 9.16301 26.1266 10.3595 26.1816C11.5588 26.2366 11.9446 26.25 14.9986 26.25C18.0554 26.25 18.4385 26.2366 19.6378 26.1816C20.837 26.1266 21.6531 25.9375 22.3692 25.6595C23.1092 25.371 23.7364 24.9851 24.3608 24.3608C24.9879 23.7364 25.371 23.1065 25.6567 22.3692C25.9375 21.6526 26.1266 20.8342 26.1816 19.6378C26.2366 18.4385 26.25 18.0554 26.25 15.0014C26.25 11.9446 26.2366 11.561 26.1816 10.3617ZM22.3559 8.99508C22.3559 8.2473 21.7499 7.6435 21.0049 7.6435C20.2599 7.6435 19.6532 8.2473 19.6532 8.99508C19.6532 9.7401 20.2599 10.3439 21.0049 10.3439C21.7499 10.3439 22.3559 9.7401 22.3559 8.99508ZM11.2491 15.0014C11.2491 17.0712 12.9286 18.7481 14.9986 18.7481C17.0691 18.7481 18.7509 17.0712 18.7509 15.0014C18.7509 12.9281 17.0691 11.2491 14.9986 11.2491C12.9286 11.2491 11.2491 12.9281 11.2491 15.0014ZM9.22365 15.0014C9.22365 11.8106 11.8078 9.22089 14.9986 9.22089C18.1894 9.22089 20.7764 11.8106 20.7764 15.0014C20.7764 18.1894 18.1894 20.7764 14.9986 20.7764C11.8078 20.7764 9.22365 18.1894 9.22365 15.0014Z" fill="#D9D9D9" />
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M19.9693 10.1337C19.0929 9.56389 18.4634 8.6495 18.2653 7.58589C18.2219 7.35254 18.1974 7.11649 18.1974 6.875H15.4028L15.3973 18.0729C15.3512 19.3264 14.3174 20.333 13.0531 20.333C12.6597 20.333 12.2906 20.2354 11.965 20.0644C11.2162 19.671 10.7061 18.8869 10.7061 17.986C10.7061 16.6917 11.7588 15.6362 13.0558 15.6362C13.2973 15.6362 13.5306 15.677 13.7477 15.7448V13.5551V12.8931C13.5198 12.8632 13.2891 12.8416 13.0558 12.8416C10.2204 12.8416 7.91406 15.1479 7.91406 17.9832C7.91406 19.7225 8.78233 21.2636 10.1091 22.1944C10.9448 22.7804 11.9596 23.125 13.0558 23.125C15.8912 23.125 18.1974 20.8187 18.1974 17.9832V12.3043C19.2937 13.0911 20.6368 13.5551 22.0857 13.5551V11.3845V10.7632C21.3042 10.7605 20.5771 10.5298 19.9693 10.1337Z" fill="#D9D9D9" />
+									</svg>
+								</a>
+							</li>
+						</ul>
+						<div class="footer__downloads">
+							<a href="#">
+								<img src="img/downloads/google-play.svg" alt="icon: google play">
+							</a>
+							<a href="#">
+								<img src="img/downloads/apple-store.svg" alt="icon: apple store">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<span class="footer__copyright">© 2024 Meetup</span>
+					<ul>
+						<li>
+							<a href="#">Terms of Service</a>
+						</li>
+						<li>
+							<a href="#">Privacy Policy</a>
+						</li>
+						<li>
+							<a href="#">Do Not Sell or Share My Personal Data</a>
+						</li>
+						<li>
+							<a href="#">Cookie Policy</a>
+						</li>
+						<li>
+							<a href="#">Help</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="./js/script.js"></script>
+</body>
+
+</html>
